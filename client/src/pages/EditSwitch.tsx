@@ -25,7 +25,7 @@ interface SwitchAllData {
 }
 
 const fetchSwitchDataFromDatabase = (switchId: any) => {
-  return fetch(`http://10.8.220.158:5000/api/v1/switch/${switchId}`)
+  return fetch(`http://localhost:5000/api/v1/switch/${switchId}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");

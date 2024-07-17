@@ -29,7 +29,7 @@ const EditFloor = () => {
   const [floorData, setFloorData] = useState<any>(null);
 
   useEffect(() => {
-    fetch(`http://10.8.220.158:5000/api/v1/floor/${id}`, {
+    fetch(`http://localhost:5000/api/v1/floor/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -44,7 +44,7 @@ const EditFloor = () => {
           setFloorData(floorData);
 
           // Fetch building data after receiving floor data
-          fetch("http://10.8.220.158:5000/api/v1/building?_end=10&_start=0&", {
+          fetch("http://localhost:5000/api/v1/building?_end=10&_start=0&", {
             method: "GET",
           })
             .then((res) => res.json())

@@ -98,7 +98,7 @@ function App() {
       try {
         // Check the credentials in the MongoDB database
         const response = await fetch(
-          "http://10.8.220.158:5000/api/v1/user/login",
+          "http://localhost:5000/api/v1/user/login",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -193,7 +193,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://10.8.220.158:5000/api/v1")}
+          dataProvider={dataProvider("http://localhost:5000/api/v1")}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}

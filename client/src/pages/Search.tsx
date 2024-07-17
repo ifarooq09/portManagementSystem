@@ -68,16 +68,16 @@ const Search = () => {
       try {
         // Fetch data for each model and assign to the corresponding variables
         const buildingData = await fetch(
-          "http://10.8.220.158:5000/api/v1/building?_end=10&_start=0&"
+          "http://localhost:5000/api/v1/building?_end=10&_start=0&"
         );
         const floorData = await fetch(
-          "http://10.8.220.158:5000/api/v1/floor?_end=10&_start=0&"
+          "http://localhost:5000/api/v1/floor?_end=10&_start=0&"
         );
         const switchData = await fetch(
-          "http://10.8.220.158:5000/api/v1/switch?_end=10&_start=0&"
+          "http://localhost:5000/api/v1/switch?_end=10&_start=0&"
         );
         const portData = await fetch(
-          "http://10.8.220.158:5000/api/v1/port?_end=10&_start=0&"
+          "http://localhost:5000/api/v1/port?_end=10&_start=0&"
         );
 
         const [buildingResults, floorResults, switchResults, portResults] =

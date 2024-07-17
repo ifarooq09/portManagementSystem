@@ -36,11 +36,11 @@ app.use("/api/v1/user", userRouter)
 app.use("/api/v1/my-profile", userRouter)
 app.use("/api/v1/log", logRouter)
 app.use("/api/v1/building", buildingRouter)
-app.use("/api/v1/floor", floorRouter)
+app.use("/api/v1/floor", floorRouter) 
 app.use("/api/v1/switch", switchRouter)
 app.use("/api/v1/port", portRouter)
 
-const startServer = async () => {
+const startServer = async () => { 
     try {
         // connect to database
         connectDB(process.env.MONGODB_URL)

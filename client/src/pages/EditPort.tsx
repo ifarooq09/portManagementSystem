@@ -36,7 +36,7 @@ interface PortData {
 }
 
 const fetchPortDataFromDatabase = (portId: any) => {
-  return fetch(`http://10.8.220.158:5000/api/v1/port/${portId}`)
+  return fetch(`http://localhost:5000/api/v1/port/${portId}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");

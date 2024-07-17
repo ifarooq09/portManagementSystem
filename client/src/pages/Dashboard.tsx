@@ -47,7 +47,7 @@ const Dashboard = () => {
 
   // Fetch building data from the backend
   useEffect(() => {
-    fetch("http://10.8.220.158:5000/api/v1/building?_end=16&_start=0&")
+    fetch("http://localhost:5000/api/v1/building?_end=16&_start=0&")
       .then((res) => res.json())
       .then((data) => {
         setBuildingData(data);

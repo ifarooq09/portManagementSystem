@@ -43,7 +43,7 @@ const CreateSwitch = () => {
   >([]);
 
   useEffect(() => {
-    fetch("http://10.8.220.158:5000/api/v1/building?_end=10&_start=0&", {
+    fetch("http://localhost:5000/api/v1/building?_end=10&_start=0&", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -59,7 +59,7 @@ const CreateSwitch = () => {
 
   useEffect(() => {
     if (selectedBuilding) {
-      fetch(`http://10.8.220.158:5000/api/v1/building/${selectedBuilding._id}`, {
+      fetch(`http://localhost:5000/api/v1/building/${selectedBuilding._id}`, {
         method: "GET",
       })
         .then((res) => res.json())
